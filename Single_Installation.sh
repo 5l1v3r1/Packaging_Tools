@@ -14,6 +14,8 @@ echo "  _____   _______     _____ _______
 echo "**************************************************************************************************************************"
 
 sudo apt-get update && sudo apt-get upgrade
+lsb_release -a
+        echo "Abort if it is not debian && ubuntu by ctrl+c"
 
 echo "**************************************************************************************************************************"
 
@@ -28,6 +30,9 @@ echo "**************************************************************************
 
 sudo apt-get update && sudo apt-get upgrade 
 sudo apt-get install flashrom openocd 
+mkdir hardware
+cd hardware
+
 
 echo "**************************************************************************************************************************"
 echo"  _____           _ _       
@@ -36,7 +41,10 @@ echo"  _____           _ _
  |  _  // _` |/ _` | |/ _ \ 
  | | \ \ (_| | (_| | | (_) |
  |_|  \_\__,_|\__,_|_|\___/ 
-                            
+ 
+echo "**************************************************************************************************************************"
+mkdir radio
+cd radio
                             "
 echo "**************************************************************************************************************************"
 
@@ -49,11 +57,9 @@ echo "______ _            _              _   _
 echo "**************************************************************************************************************************"
 
 sudo sudo apt-get update && sudo apt-get upgrade
-mkdir session-owasp
-cd session-owasp
+mkdir bluetooth
+cd bluetooth
 echo ******Dependencies******
-lsb_release -a
-        echo "Abort if it is not debian && ubuntu by ctrl+c"
 sudo apt-get install python3 && sudo apt-get install python3-pip && sudo pip3 install pwntools
 sudo sudo apt-get install bluetooth bluez libbluetooth-dev libudev-dev
 sudo sudo apt-get update && sudo apt-get upgrade
