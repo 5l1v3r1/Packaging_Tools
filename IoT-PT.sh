@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Check for the --yes command line argument to skip yes/no prompts
+if [ "$1" = "--yes" ]
+then
+    YES=1
+else
+    YES=0
+fi
+
 echo "  _____   _______     _____ _______ 
  |_   _| |__   __|   |  __ \__   __|
    | |  ___ | |______| |__) | | |   
@@ -30,7 +38,7 @@ echo "
 echo "**********************************************"
 
 sudo apt-get update && sudo apt-get upgrade 
-sudo apt-get install flashrom openocd 
+sudo apt-get install flashrom openocd putty screen 
 mkdir hardware
 cd hardware
 
